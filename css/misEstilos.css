@@ -1,0 +1,88 @@
+*{
+    margin: 5px;
+    border-radius: 3px;
+}
+header{
+    background-color: rgb(18, 14, 24);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #3f3f3f;
+    color: #00CCFF;
+}
+
+.contenedor{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+aside{
+    grid-column: 1/2;
+    background-color: gray;
+}
+section{
+    grid-column: 2/5;
+    background-color: rgb(218, 199, 238);
+}
+
+footer{
+    text-align: center;
+    background: #3f3f3f;
+    color: #00CCFF;
+    padding: 10px;
+}
+.justificado{
+    text-align: justify;
+}
+.centrado{
+    text-align: center;
+}
+
+/*  sección de estilos para el menú*/
+
+
+.menu{
+    /* padding: 0px 20px; */
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    list-style:none ;
+}
+
+.menu li a{
+    background-color:black ;
+    color: blanchedalmond;
+    text-decoration: none;
+    padding: 10px 80px;
+    display: block;
+    /*min-width: 140px;*/
+}
+.menu li a:hover{
+    background-color: chocolate;
+}
+.menu li ul{
+    display: none;
+    margin-left: auto;
+    margin-right: auto;
+    position: absolute;
+    
+}
+.menu li:hover > ul{
+    display: block; 
+}
+
+
+@media (max-width: 600px) {
+    .menu {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    header{
+        flex-direction: column;/* coloca los elementos verticales. */
+        align-items: center;
+        
+    }
+}
